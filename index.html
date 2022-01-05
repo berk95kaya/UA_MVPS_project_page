@@ -132,24 +132,24 @@
 <html>
 
 <head>
-	<title>Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo</title>
+	<title>Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo</title>
 	<meta property="og:image" content="" />
-	<meta property="og:title" content="Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo" />
+	<meta property="og:title" content="Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo" />
 	<link href='https://fonts.googleapis.com/css?family=Lora:400italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo</span>
+		<span style="font-size:36px">Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo</span>
 	</center>
 	<br>
 
-	<table align=center width=850px>
+	<table align=center width=950px>
 		<tr>
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup>1</sup></span>
+					<span style="font-size:18px"><a href="https://www.linkedin.com/in/francesco-sarno/?originalSubdomain=ch">Francesco Sarno</a><sup>1</sup></span>
 				</center>
 			</td>
 			<td align=center width=100px>
@@ -159,7 +159,12 @@
 			</td>
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="https://www.linkedin.com/in/francesco-sarno/?originalSubdomain=ch">Francesco Sarno</a><sup>1</sup></span>
+					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup>1</sup></span>
+				</center>
+			</td>		
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="https://zhiwu-huang.github.io/">Zhiwu Huang</a><sup>1</sup></span>
 				</center>
 			</td>
 			<td align=center width=100px>
@@ -198,11 +203,17 @@
 	<br>
 
 	<!-- Image for the project-->
-	<table align=center width=900px>
+	<table align=center width=950px>
 		<tr>
-			<td width=450px>
+			<td width=400px>
 				<center>
-					<a><img src="./images/pipeline.png" height="300px"></img></href></a><br>
+					<a><img src="./images/lcnet.png" height="200px"></img></href></a><br> 
+				</center>
+			</td>
+			<td width=150px> </td>
+			<td width=400px>
+				<center>
+					<a><img src="./images/nenet.png" height="200px"></img></href></a><br>
 				</center>
 			</td>
 		</tr>
@@ -215,7 +226,7 @@
 		<span style="font-weight:bold">Abstract</span>
 		<br>
 		<font style="font-family: Lora; font-size: 100%">
-		We present a modern solution to the multi-view photometric stereo problem (MVPS). Our work suitably exploits the image formation model in a MVPS experimental setup to recover the dense 3D reconstruction of an object from images. We procure the surface orientation using a photometric stereo (PS) image formation model and blend it with a multi-view neural radiance field representation to recover the object's surface geometry. Contrary to the previous multi-staged framework to MVPS, where the position, iso-depth contours, or orientation measurements are estimated independently and then fused later, our method is simple to implement and realize. Our method performs neural rendering of multi-view images while utilizing surface normals estimated by a deep photometric stereo network. We render the MVPS images by considering the object's surface normals for each 3D sample point along the viewing direction rather than explicitly using the density gradient in the volume space via 3D occupancy information. We optimize the proposed neural radiance field representation for the MVPS setup efficiently using a fully connected deep network to recover the 3D geometry of an object. Extensive evaluation on the DiLiGenT-MV benchmark dataset shows that our method performs better than the approaches that perform only PS or only multi-view stereo (MVS) and provides comparable results against the state-of-the-art multi-stage fusion methods.
+		We present an automated machine learning approach for uncalibrated photometric stereo (PS). Our work aims at discovering lightweight and computationally efficient PS neural networks with excellent surface normal accuracy. Unlike previous uncalibrated deep PS networks, which are handcrafted and carefully tuned, we leverage differentiable neural architecture search (NAS) strategy to find uncalibrated PS architecture automatically. We begin by defining a discrete search space for a light calibration network and a normal estimation network, respectively. We then perform a continuous relaxation of this search space and present a gradient-based optimization strategy to find an efficient light calibration and normal estimation network. Directly applying the NAS methodology to uncalibrated PS is not straightforward as certain task-specific constraints must be satisfied, which we impose explicitly. Moreover, we search for and train the two networks separately to account for the Generalized Bas-Relief (GBR) ambiguity. Extensive experiments on the DiLiGenT dataset show that the automatically searched neural architectures performance compares favorably with the state-of-the-art uncalibrated PS methods while having a lower memory footprint.
 		</font>
 	</p><br><br>
 	<hr>
@@ -226,9 +237,9 @@
 			<h1>Paper</h1>
 		</center>
 		<tr>
-			<td><a href="./documents/main_paper_wacv2022.pdf"><img style="height:200px" src="./images/thumbnail.png" /></a></td>
-			<td><span style="font-size:16pt">Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo<br><br>
-			<i>Berk Kaya, Suryansh Kumar, Francesco Sarno, Vittorio Ferrari, Luc Van Gool.</i><br><br>
+			<td><a href="./documents/main_paper_wacv2022.pdf"><img style="height:150px" src="./images/thumbnail.png" /></a></td>
+			<td><span style="font-size:14pt">Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo<br><br>
+			<i>Francesco Sarno, Suryansh Kumar, Berk Kaya, Zhiwu Huang, Vittorio Ferrari, Luc Van Gool.</i><br><br>
 			IEEE/CVF <span style="font-weight:bold">WACV</span> 2022, Waikoloa, Hawaii, USA.<br></td>
 		</tr>
 	</table>
@@ -274,38 +285,38 @@
 	<hr>
 
 	<!--Some Results-->
-	<!--
+	
 	<center>
 		<h1>Results</h1>
 	</center>
 	<table align=center width=1100px>
 		<tr>
 			<td width=400px>
-				<center> <span align="top" style="font-size:20px">DiLiGenT Dataset</span><br><br> </center>
+				<center> <span align="top" style="font-size:16px"> Light Directions and Intensities on DiLiGenT Benchmark</span><br><br> </center>
 			</td>
 			<td width=50px> </td>
 			<td width=400px>
-				<center> <span align="top" style="font-size:20px">Our Dataset</span><br><br> </center>
+				<center> <span align="top" style="font-size:16px">Surface Normals on DiLiGenT Benchmark</span><br><br> </center>
 			</td>
 		</tr>
 
 		<tr height="300px">
 			<td valign="top" width=400px>
 				<center>
-					<a><img src="./images/diligent_dataset_results.png" height="300px"></img></href></a>
+					<a><img src="./images/light.png" height="250px"></img></href></a>
 				</center>
 			</td>
 
 			<td width=50px> </td>
 			<td valign="top" width=400px>
 				<center>
-					<a><img src="./images/new_dataset_results.png" height="300px"></img></href></a>
+					<a><img src="./images/normal.png" height="250px"></img></href></a>
 				</center>
 			</td>
 		</tr>
 	</table>
 	<br>
-	<hr> -->
+	<hr> 
 
 	<!--Code or github link-->
 <!-- 	<center>
@@ -327,37 +338,7 @@
 
 	<!--Results (Pictures or Youtube link) or Presentation link-->
 	<a name="results"></a>
-	<center>
-		<h1>Acquisition Setup and Statistical Comparison</h1>
-	</center><br><br>
-	<!-- Image for the project-->
-	<table align=center width=900px>
-		<tr>
-			<td width=450px>
-				<center>
-					<a><img src="./images/setup.png" height="400px"></img></href></a><br>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<br>
-	<hr>
 
-	<table align=center width=1100px>
-		<!--Video link-->
-		<tr height="400px">
-			<td valign="top" width=1100px>
-				<center>
-					<video width="1000" controls autoplay muted loop> 
-						<source src="./videos/wacv2022_video.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<br>
-	<hr>
 
 	<center>
 		<h1>Video Presentation (The audio works well on Chrome, Safari)</h1>
@@ -385,13 +366,16 @@
 		</center>
 		<tr>
 			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/berk.jpg"><p>Berk Kaya</p></div>
+				<div class="author_image"><img style="height:150px" src="./images/authors/francesco.jpg"><p>Francesco Sarno</p></div>
 			</td>
 			<td>
 				<div class="author_image"><img style="height:150px" src="./images/authors/suryansh.jpg"><p>Suryansh Kumar</p></div>
 			</td>
 			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/francesco.jpg"><p>Francesco Sarno</p></div>
+				<div class="author_image"><img style="height:150px" src="./images/authors/berk.jpg"><p>Berk Kaya</p></div>
+			</td>
+			<td>
+				<div class="author_image"><img style="height:150px" src="./images/authors/zhiwu.jpg"><p>Zhiwu Huang</p></div>
 			</td>
 			<td>
 				<div class="author_image"><img style="height:150px" src="./images/authors/vitto.png"><p>Vittorio Ferrari</p></div>

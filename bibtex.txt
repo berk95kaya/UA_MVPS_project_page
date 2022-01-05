@@ -1,7 +1,7 @@
-@inproceedings{kaya2022neural,
-  title={Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo},
-  author={Kaya, Berk and Kumar, Suryansh and Sarno, Francesco and Ferrari, Vittorio and Van Gool, Luc},
+@inproceedings{sarno2022neural,
+  title={Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo},
+  author={Sarno, Francesco and Kumar, Suryansh and Kaya, Berk and Huang, Zhiwu and Ferrari, Vittorio and Van Gool, Luc},
   booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={1965--1977},
+  pages={361--371},
   year={2022}
 }
