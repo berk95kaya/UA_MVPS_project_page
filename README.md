@@ -1,5 +1,3 @@
-# Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces
+# Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo
 
-
-To appear in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
-June 2021.
+Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2022

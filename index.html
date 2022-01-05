@@ -132,16 +132,16 @@
 <html>
 
 <head>
-	<title>Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces</title>
+	<title>Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo</title>
 	<meta property="og:image" content="" />
-	<meta property="og:title" content="Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces" />
+	<meta property="og:title" content="Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo" />
 	<link href='https://fonts.googleapis.com/css?family=Lora:400italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces</span>
+		<span style="font-size:36px">Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo</span>
 	</center>
 	<br>
 
@@ -159,7 +159,7 @@
 			</td>
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="">Carlos Oliveira</a><sup>1</sup></span>
+					<span style="font-size:18px"><a href="https://www.linkedin.com/in/francesco-sarno/?originalSubdomain=ch">Francesco Sarno</a><sup>1</sup></span>
 				</center>
 			</td>
 			<td align=center width=100px>
@@ -189,7 +189,7 @@
 		<tr>
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:20px">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
+					<span style="font-size:20px">IEEE Winter Conference on Applications of Computer Vision (WACV), 2022.
 					</span>
 				</center>
 			</td>
@@ -202,7 +202,7 @@
 		<tr>
 			<td width=450px>
 				<center>
-					<a><img src="./images/Tablet_Light_Effect_1.png" height="500px"></img></href></a><br>
+					<a><img src="./images/pipeline.png" height="500px"></img></href></a><br>
 				</center>
 			</td>
 		</tr>
@@ -215,7 +215,7 @@
 		<span style="font-weight:bold">Abstract</span>
 		<br>
 		<font style="font-family: Lora; font-size: 100%">
-		This paper presents an uncalibrated deep neural network framework for the photometric stereo problem. For training models to solve the problem, existing neural network-based methods either require exact light directions or ground-truth surface normals of the object or both. However, in practice, it is challenging to procure both of this information precisely,  which restricts the broader adoption of photometric stereo algorithms for vision application. To bypass this difficulty, we propose an uncalibrated neural inverse rendering approach to this problem. Our method first estimates the light directions from the input images and then optimizes an image reconstruction loss to calculate the surface normals, bidirectional reflectance distribution function value, and depth. Additionally, our formulation explicitly models the concave and convex parts of a complex surface to consider the effects of interreflections in the image formation process. Extensive evaluation of the proposed method on the challenging subjects generally shows comparable or better results than the supervised and classical approaches.
+		We present a modern solution to the multi-view photometric stereo problem (MVPS). Our work suitably exploits the image formation model in a MVPS experimental setup to recover the dense 3D reconstruction of an object from images. We procure the surface orientation using a photometric stereo (PS) image formation model and blend it with a multi-view neural radiance field representation to recover the object's surface geometry. Contrary to the previous multi-staged framework to MVPS, where the position, iso-depth contours, or orientation measurements are estimated independently and then fused later, our method is simple to implement and realize. Our method performs neural rendering of multi-view images while utilizing surface normals estimated by a deep photometric stereo network. We render the MVPS images by considering the object's surface normals for each 3D sample point along the viewing direction rather than explicitly using the density gradient in the volume space via 3D occupancy information. We optimize the proposed neural radiance field representation for the MVPS setup efficiently using a fully connected deep network to recover the 3D geometry of an object. Extensive evaluation on the DiLiGenT-MV benchmark dataset shows that our method performs better than the approaches that perform only PS or only multi-view stereo (MVS) and provides comparable results against the state-of-the-art multi-stage fusion methods.
 		</font>
 	</p><br><br>
 	<hr>
@@ -226,10 +226,10 @@
 			<h1>Paper</h1>
 		</center>
 		<tr>
-			<td><a href="./documents/main_paper_cvpr21.pdf"><img style="height:200px" src="./images/CVPR21_thumbnail.png" /></a></td>
-			<td><span style="font-size:16pt">Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces<br><br>
-			<i>Berk Kaya, Suryansh Kumar, Carlos Oliveira, Vittorio Ferrari, Luc Van Gool.</i><br><br>
-			IEEE/CVF <span style="font-weight:bold">CVPR</span> 2021, Tennessee, USA (Virtual).<br></td>
+			<td><a href="./documents/main_paper_wacv2022.pdf"><img style="height:200px" src="./images/thumbnail.png" /></a></td>
+			<td><span style="font-size:16pt">Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo<br><br>
+			<i>Berk Kaya, Suryansh Kumar, Francesco Sarno, Vittorio Ferrari, Luc Van Gool.</i><br><br>
+			IEEE/CVF <span style="font-weight:bold">WACV</span> 2022, Waikoloa, Hawaii, USA.<br></td>
 		</tr>
 	</table>
 	<br>
@@ -239,31 +239,31 @@
 		<tr>
 			<td>
 				<span style="font-size:14pt">
-					<center><a href="./documents/main_paper_cvpr21.pdf">[Paper]</a>
+					<center><a href="./documents/main_paper_wacv2022.pdf">[Paper]</a>
 					</center>
 				</span>
 			</td>
 
 			<td>
 				<span style="font-size:14pt">
-					<center><a href="./documents/supplementary_cvpr21.pdf">[Supplementary]</a>
+					<center><a href="./documents/supplementary_wacv2022.pdf">[Supplementary]</a>
 					</center>
 				</span>
 			</td>
 			
 			<td>
 				<span style="font-size:14pt">
-					<center><a href="./documents/poster_cvpr21.pdf">[Poster]</a>
+					<center><a href="./documents/poster_wacv2022.pdf">[Poster]</a>
 					</center>
 				</span>
 			</td>
 
-			<td>
+			<!-- <td>
 				<span style="font-size:14pt">
 					<center><a href="./documents/slides_cvpr21.pdf">[Presentation]</a>
 					</center>
 				</span>
-			</td>
+			</td> -->
 
 			<td><span style="font-size:14pt">
 					<center><a href="./bibtex.txt">[Bibtex]</a></center>
@@ -274,6 +274,7 @@
 	<hr>
 
 	<!--Some Results-->
+	<!--
 	<center>
 		<h1>Results</h1>
 	</center>
@@ -288,7 +289,6 @@
 			</td>
 		</tr>
 
-		<!--picture or link-->
 		<tr height="300px">
 			<td valign="top" width=400px>
 				<center>
@@ -305,10 +305,10 @@
 		</tr>
 	</table>
 	<br>
-	<hr>
+	<hr> -->
 
 	<!--Code or github link-->
-	<center>
+<!-- 	<center>
 		<h1>Code and Dataset</h1>
 	</center>
 	<table align=center width=800px>
@@ -323,20 +323,33 @@
 		</tr>
 	</table>
 	<br>
-	<hr>
+	<hr> -->
 
 	<!--Results (Pictures or Youtube link) or Presentation link-->
 	<a name="results"></a>
 	<center>
-		<h1>Dataset Acquisition Setup and Statistical Comparison</h1>
+		<h1>Acquisition Setup and Statistical Comparison</h1>
 	</center><br><br>
+	<!-- Image for the project-->
+	<table align=center width=900px>
+		<tr>
+			<td width=450px>
+				<center>
+					<a><img src="./images/setup.png" height="500px"></img></href></a><br>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
 	<table align=center width=1100px>
 		<!--Video link-->
 		<tr height="400px">
 			<td valign="top" width=1100px>
 				<center>
 					<video width="1000" controls autoplay muted loop> 
-						<source src="./videos/cvpr21_video.mp4" type="video/mp4">
+						<source src="./videos/wacv2022_video.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</center>
@@ -355,7 +368,7 @@
 			<td valign="top" width=1100px>
 				<center>
 					<video width="1000" controls autoplay muted loop> 
-						<source src="./videos/cvpr21_presentationvideo.mp4" type="video/mp4">
+						<source src="./videos/wacv2022_presentationvideo.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</center>
@@ -378,7 +391,7 @@
 				<div class="author_image"><img style="height:150px" src="./images/authors/suryansh.jpg"><p>Suryansh Kumar</p></div>
 			</td>
 			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/cadu.jpg"><p>Carlos Oliveira</p></div>
+				<div class="author_image"><img style="height:150px" src="./images/authors/francesco.jpg"><p>Francesco Sarno</p></div>
 			</td>
 			<td>
 				<div class="author_image"><img style="height:150px" src="./images/authors/vitto.png"><p>Vittorio Ferrari</p></div>
@@ -413,7 +426,7 @@
 
 			<td>
 				<p style="text-align: justify;">
-					This work was funded by Focused Research Award from Google(CVL, ETH 2019-HE-318, 2019-HE-323). Authors thank Vincent Vanweddingen from KU Lueven for providing some of the datasets for our experiments. Suryansh Kumar's project is supported by "ETH Zurich Foundation and Google, Project Number: 2019-HE-323" for bringing together best academic and industrial research.
+					This work was funded by Focused Research Award from Google(CVL, ETH 2019-HE-318, 2019-HE-323). Suryansh Kumar's project is supported by "ETH Zurich Foundation and Google, Project Number: 2019-HE-323" for bringing together best academic and industrial research.
 				</p>
 			</td>
 		</tr>
