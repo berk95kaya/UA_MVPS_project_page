@@ -1,20 +1,44 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script src="https://kit.fontawesome.com/8c6b6fca0e.js" crossorigin="anonymous"></script>
 
 <style type="text/css">
 	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-family: "Tahoma", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		font-weight: 300;
 		font-size: 16px;
 		margin-left: auto;
 		margin-right: auto;
 		width: 1100px;
+		text-align: center;
+
 	}
 
 	h1 {
 		font-weight: 300;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
 	}
 
+	h2 {
+		text-align: center;
+		font-weight: normal;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		color:#222222;
+	}
+
+	sup{
+		color:#555555;
+	}
 	.disclaimerbox {
 		background-color: #eee;
 		border: 1px solid #eeeeee;
@@ -63,64 +87,10 @@
 		font-size: 22px;
 	}
 
-	.layered-paper-big {
-		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-			0px 0px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The top layer shadow */
-			5px 5px 0 0px #fff,
-			/* The second layer */
-			5px 5px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The second layer shadow */
-			10px 10px 0 0px #fff,
-			/* The third layer */
-			10px 10px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The third layer shadow */
-			15px 15px 0 0px #fff,
-			/* The fourth layer */
-			15px 15px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The fourth layer shadow */
-			20px 20px 0 0px #fff,
-			/* The fifth layer */
-			20px 20px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The fifth layer shadow */
-			25px 25px 0 0px #fff,
-			/* The fifth layer */
-			25px 25px 1px 1px rgba(0, 0, 0, 0.35);
-		/* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper {
-		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-			0px 0px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The top layer shadow */
-			5px 5px 0 0px #fff,
-			/* The second layer */
-			5px 5px 1px 1px rgba(0, 0, 0, 0.35),
-			/* The second layer shadow */
-			10px 10px 0 0px #fff,
-			/* The third layer */
-			10px 10px 1px 1px rgba(0, 0, 0, 0.35);
-		/* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-
-	.vert-cent {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
 
 	hr {
 		border: 0;
-		height: 1.5px;
+		height: 2px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
 
@@ -132,156 +102,203 @@
 <html>
 
 <head>
-	<title>Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo</title>
+	<title>Uncertainty-Aware Deep Multi-View Photometric Stereo</title>
 	<meta property="og:image" content="" />
-	<meta property="og:title" content="Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo" />
+	<meta property="og:title" content="Uncertainty-Aware Deep Multi-View Photometric Stereo"/>
 	<link href='https://fonts.googleapis.com/css?family=Lora:400italic' rel='stylesheet' type='text/css'>
 </head>
 
+<!--Main page starts here-->
 <body>
+
+	<!-- Title -->
+	<br>
 	<br>
 	<center>
-		<span style="font-size:36px">Neural Architecture Search for Efficient Uncalibrated Deep Photometric Stereo</span>
+		<span style="font-size:36px; color:#333333">Uncertainty-Aware Deep Multi-View Photometric Stereo</span>
 	</center>
 	<br>
 
-	<table align=center width=950px>
+
+
+	<!-- Authors -->
+	<table align=center width=1000px>
 		<tr>
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="https://www.linkedin.com/in/francesco-sarno/?originalSubdomain=ch">Francesco Sarno</a><sup>1</sup></span>
+					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup style="font-size:10px">1</sup></span>
+				</center>
+			</td>	
+			
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="https://suryanshkumar.github.io/">Suryansh Kumar</a><sup style="font-size:10px">1</sup></span>
 				</center>
 			</td>
+			
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="https://suryanshkumar.github.io/">Suryansh Kumar</a><sup>1</sup></span>
+					<span style="font-size:18px"><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.MjM1NjA3.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html">Carlos Oliveira</a><sup style="font-size:10px">1</sup></span>
 				</center>
 			</td>
+
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup>1</sup></span>
-				</center>
-			</td>		
-			<td align=center width=100px>
-				<center>
-					<span style="font-size:18px"><a href="https://zhiwu-huang.github.io/">Zhiwu Huang</a><sup>1</sup></span>
+					<span style="font-size:18px"><a href="https://sites.google.com/view/vittoferrari">Vittorio Ferrari</a><sup style="font-size:10px">2</sup></span>
 				</center>
 			</td>
+
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:18px"><a href="https://sites.google.com/view/vittoferrari">Vittorio Ferrari</a><sup>2</sup></span>
-				</center>
-			</td>
-			<td align=center width=100px>
-				<center>
-					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en">Luc Van Gool</a><sup>1, 3</sup></span>
+					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en">Luc Van Gool</a><sup style="font-size:10px">1,3</sup></span>
 				</center>
 			</td>
 		</tr>
 	</table>
 
-	<table align=center width=700px>
-		<tr>
-			<td align=center width=100px>
-				<center>
-					<span style="font-size:20px">ETH Zurich<sup>1</sup>, Google Research<sup>2</sup>, KU Lueven</span><sup>3</sup></span>
-				</center>
-			</td>
-		</tr>
-	</table>
 
+
+    <!-- Affiliations -->
 	<table align=center width=700px>
 		<tr>
 			<td align=center width=100px>
 				<center>
-					<span style="font-size:20px">IEEE Winter Conference on Applications of Computer Vision (WACV), 2022.
-					</span>
+					<span style="font-size:18px">ETH Zurich<sup style="font-size:10px">1</sup>,  &nbsp Google Research<sup style="font-size:10px">2</sup>,  &nbsp KU Lueven</span><sup style="font-size:10px">3</sup></span>
 				</center>
 			</td>
 		</tr>
 	</table>
 	<br>
 
+
+	<!-- Conference -->
+	<center>
+		<span style="font-size:26px; color:#333333; font-family: Helvetica; font-weight: 500;">CVPR 2022</span>
+	</center>
+	<br>
+	<br>
+
+
+
+	<!-- Links -->
+	<table align=center width=600>
+		<tr>
+			<td width=100px>
+				<center>
+                <a href="./images/uncertainty_aware_deep_multiview_photometric_stereo.pdf">
+                    <i class="fa fa-file-pdf fa-2xl"></i> 
+                </a> <br>
+                </center>
+			</td>
+			<td width=100px>
+				<center>
+                <a href="./images/supplementary.pdf">
+                    <i class="fa fa-file-pdf fa-2xl"></i> 
+                </a> <br>
+                </center>
+			</td>
+			<td width=100px>
+				<center>
+					<a href="https://github.com/berk95kaya/UA-MVPS">
+                    <i class="fa fa-github fa-2xl"></i>
+                </a> <br>	
+				</center>
+			</td>
+			<!--<td width=100px>
+				<center>
+                <a href="https://paschalidoud.github.io/data/Paschalidou2021NEURIPS_poster.pdf">
+                    <i class="fa fa-picture-o"></i> <br/>
+                    Poster
+                </a>
+				<center>
+			</td>
+
+			<td width=100px>
+				<center>
+	                <a href="https://paschalidoud.github.io/data/Paschalidou2021NEURIPS_slides.pdf">
+                    <i class="fa fa-file-powerpoint-o"></i> <br/>
+                    Slides
+				<center>
+			</td>-->
+		</tr>
+
+		<tr>
+			<td>
+				<center>
+  					<span> <br> Paper</span>
+                </center>
+			</td>
+						<td>
+				<center>
+  					 <span> <br> Supplementary</span>
+
+                </center>
+			</td>
+						<td>
+				<center>
+					<span> <br> Code (Coming Soon)</span>
+                </center>
+			</td>
+	</table>
+	<br>
+<br>
 	<!-- Image for the project-->
-	<table align=center width=950px>
+	<table align=center width=1000>
 		<tr>
 			<td width=400px>
 				<center>
-					<a><img src="./images/lcnet.png" height="200px"></img></href></a><br> 
+					<a><img src="./images/mvs.png" height="150px"></img></href></a><br>
 				</center>
 			</td>
-			<td width=150px> </td>
 			<td width=400px>
 				<center>
-					<a><img src="./images/nenet.png" height="200px"></img></href></a><br>
+					<a><img src="./images/ps.png" height="150px"></img></href></a>
+				</center>
+			</td>			
+			<td width=400px>
+				<center>
+					<a><img src="./images/fusion.png" height="150px"></img></href></a>
 				</center>
 			</td>
 		</tr>
+		<tr>
+			<td width=400px>
+				<center>					
+					<span style="font-size:15px; font-family:Thoma ; font-weight: 500;">Multi-View Stereo Reconstruction</span>
+				<center>
+			</td>
+			<td width=400px>
+				<center>
+					<span style="font-size:15px; font-family:Thoma ; font-weight: 500;">Photometric Stereo Reconstruction</span>
+				<center>
+			</td>
+			<td width=400px>
+				<center>
+					<span style="font-size:15px; font-family:Thoma ; font-weight: 500;">Our Approach <br></span>
+				<center>
+			</td>
+
+
+
+
+		</tr>
 	</table>
 	<br>
+
+
 	<hr>
 
 	<!-- Abstract of the project-->
-	<p style="text-align: justify;">
-		<span style="font-weight:bold">Abstract</span>
-		<br>
-		<font style="font-family: Lora; font-size: 100%">
-		We present an automated machine learning approach for uncalibrated photometric stereo (PS). Our work aims at discovering lightweight and computationally efficient PS neural networks with excellent surface normal accuracy. Unlike previous uncalibrated deep PS networks, which are handcrafted and carefully tuned, we leverage differentiable neural architecture search (NAS) strategy to find uncalibrated PS architecture automatically. We begin by defining a discrete search space for a light calibration network and a normal estimation network, respectively. We then perform a continuous relaxation of this search space and present a gradient-based optimization strategy to find an efficient light calibration and normal estimation network. Directly applying the NAS methodology to uncalibrated PS is not straightforward as certain task-specific constraints must be satisfied, which we impose explicitly. Moreover, we search for and train the two networks separately to account for the Generalized Bas-Relief (GBR) ambiguity. Extensive experiments on the DiLiGenT dataset show that the automatically searched neural architectures performance compares favorably with the state-of-the-art uncalibrated PS methods while having a lower memory footprint.
+	<h2 > Abstract </h2>
+	<p style="text-align: justify";>
+		<font style="font-family: Calibri  ; font-size: 18px; font-weight: 500">
+		This paper presents a simple and effective solution to the longstanding classical multi-view photometric stereo (MVPS) problem. It is well-known that photometric stereo (PS) is excellent at recovering high-frequency surface details, whereas multi-view stereo (MVS) can help remove the low-frequency distortion due to PS and retain the global geometry of the shape. This paper proposes an approach that can effectively utilize such complementary strengths of PS and MVS. Our key idea is to combine them suitably while considering the per-pixel uncertainty of their estimates. To this end, we estimate per-pixel surface normals and depth using an uncertainty-aware deep-PS network and deep-MVS network, respectively. Uncertainty modeling helps select reliable surface normal and depth estimates at each pixel which then act as a true representative of the dense surface geometry. At each pixel, our approach either selects or discards deep-PS and deep-MVS network prediction depending on the prediction uncertainty measure. For dense, detailed, and precise inference of the object's surface profile, we propose to learn the implicit neural shape representation via a multilayer perceptron (MLP). Our approach encourages the MLP to converge to a natural zero-level set surface using the confident prediction from deep-PS and deep-MVS networks, providing superior dense surface reconstruction. Extensive experiments on the DiLiGenT-MV benchmark dataset show that our method provides high-quality shape recovery with a much lower memory footprint while outperforming almost all of the existing approaches.
 		</font>
-	</p><br><br>
-	<hr>
+	</p><br>
+	
+		<a><img src="./images/pipeline.png" width="1000px"></img></href></a><br>
+		<br>
 
-	<!--Paper title, thumbnails, and publication details -->
-	<table align=center width=1000>
-		<center>
-			<h1>Paper</h1>
-		</center>
-		<tr>
-			<td><a href="./documents/main_paper_wacv2022.pdf"><img style="height:150px" src="./images/thumbnail.png" /></a></td>
-			<td><span style="font-size:14pt">Neural Radiance Fields Approach to Deep Multi-View Photometric Stereo<br><br>
-			<i>Francesco Sarno, Suryansh Kumar, Berk Kaya, Zhiwu Huang, Vittorio Ferrari, Luc Van Gool.</i><br><br>
-			IEEE/CVF <span style="font-weight:bold">WACV</span> 2022, Waikoloa, Hawaii, USA.<br></td>
-		</tr>
-	</table>
-	<br>
-
-	<!-- paper link, supplementary link, bibtex link-->
-	<table align=center width=250px>
-		<tr>
-			<td>
-				<span style="font-size:14pt">
-					<center><a href="./documents/main_paper_wacv2022.pdf">[Paper]</a>
-					</center>
-				</span>
-			</td>
-
-			<td>
-				<span style="font-size:14pt">
-					<center><a href="./documents/supplementary_wacv2022.pdf">[Supplementary]</a>
-					</center>
-				</span>
-			</td>
-			
-			<td>
-				<span style="font-size:14pt">
-					<center><a href="./documents/poster_wacv2022.pdf">[Poster]</a>
-					</center>
-				</span>
-			</td>
-
-			<!-- <td>
-				<span style="font-size:14pt">
-					<center><a href="./documents/slides_cvpr21.pdf">[Presentation]</a>
-					</center>
-				</span>
-			</td> -->
-
-			<td><span style="font-size:14pt">
-					<center><a href="./bibtex.txt">[Bibtex]</a></center>
-			</td>
-		</tr>
-	</table>
-	<br>
 	<hr>
 
 	<!--Some Results-->
@@ -322,7 +339,7 @@
 <!-- 	<center>
 		<h1>Code and Dataset</h1>
 	</center>
-	<table align=center width=800px>
+	<table align=center width=1000px>
 		<tr>
 			<center>
 				<br><span style="font-size:28px">&nbsp;<a
@@ -360,35 +377,39 @@
 	<hr>
 	
  	<!--Authors-->
-	<table align=center width=1100px>
-		<center>
-			<h1>Authors</h1>
-		</center>
+	<h2>Authors</h2>
+
+	<table align=center width=1000px>
 		<tr>
 			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/francesco.jpg"><p>Francesco Sarno</p></div>
+				<div class="author_image"><img style="height:100px" src="./images/authors/berk.jpg"><p>Berk Kaya</p></div>
 			</td>
 			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/suryansh.jpg"><p>Suryansh Kumar</p></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/berk.jpg"><p>Berk Kaya</p></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/zhiwu.jpg"><p>Zhiwu Huang</p></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/vitto.png"><p>Vittorio Ferrari</p></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/luc.png">
-				<p>Luc Van Gool</p></div>
-				
+				<div class="author_image"><img style="height:100px" src="./images/authors/suryansh.jpg"><p>Suryansh Kumar</p></div>
 			</td>
 
+			<td>
+				<div class="author_image"><img style="height:100px" src="./images/authors/cadu.jpg"><p>Carlos Oliveira</p></div>
+			</td>
+			<td>
+				<div class="author_image"><img style="height:100px" src="./images/authors/vitto.png"><p>Vittorio Ferrari</p></div>
+			</td>
+			<td>
+				<div class="author_image"><img style="height:100px" src="./images/authors/luc.png">
+				<p>Luc Van Gool</p></div>	
+			</td>	
 		</tr>
 	</table>
 	<hr>
+
+	<h2> Citation </h2>
+    <p style="width:600px; text-align: left";><code >
+	@article{kaya2022uncertainty,
+	title={Uncertainty-Aware Deep Multi-View Photometric Stereo},
+	author={Kaya, Berk and Kumar, Suryansh and Oliveira,
+	Carlos and Ferrari, Vittorio and Van Gool, Luc},
+	journal={CVPR}, year={2022}}}
+	</code></pre>
 	
 
 
@@ -416,6 +437,7 @@
 		</tr>
 	</table>
 	<br><br>
+
 </body>
 
 </html>
