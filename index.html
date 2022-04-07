@@ -4,6 +4,7 @@
 
 <!-- STYLE PART -->
 <style type="text/css">
+
 /*	body {
 		font-family: "Tahoma", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		font-weight: 300;
@@ -30,7 +31,7 @@
 	}
 
 	span.conference {
-		font-size:24px;
+		font-size:20px;
 	}
 
 	span.authors {
@@ -50,6 +51,15 @@
 		margin-left: auto;
 		margin-right: auto;
 		color:#222222;
+	}
+
+	span.abstract {
+		justify-content: center
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		color:#222222;
+		text-align: justify;
 	}
 
 
@@ -119,9 +129,9 @@
 	.author_image {
 		text-align: center;
 	}
+
 </style>
-
-
+	
 
 <!-- HTML PART -->
 <html lang="en">
@@ -164,7 +174,13 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#abstract">Abstract</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reconstructions">Reconstructions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mesh_quality">Mesh Quality</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
@@ -218,7 +234,8 @@
 		<br>
 		<!-- Conference -->
 		<center>	
-			<span class="conference">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022</span>
+			<span class="conference">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022</span><br>
+			<span class="conference">New Orleans - Louisiana </span>
 		</center>
 	  </div>
 	  </div>
@@ -258,68 +275,180 @@
 		</div>
 	</div>
 
+	<a class = 'anchor' name='abstract'></a>
 	<br>
+	<hr>
 	<br>
 	
 
-	<!-- Image for the project-->
-	<table align=center width=1000>
-		<tr>
-			<td width=400px>
-				<center>
-					<a><img src="./images/mvs.png" height="150px"></img></href></a><br>
-				</center>
-			</td>
-			<td width=400px>
-				<center>
-					<a><img src="./images/ps.png" height="150px"></img></href></a>
-				</center>
-			</td>			
-			<td width=400px>
-				<center>
-					<a><img src="./images/fusion.png" height="150px"></img></href></a>
-				</center>
-			</td>
-		</tr>
-		<tr>
-			<td width=400px>
-				<center>					
-					<span style="font-size:15px; font-family:Thoma ; font-weight: 500;">Multi-View Stereo Reconstruction</span>
-				<center>
-			</td>
-			<td width=400px>
-				<center>
-					<span style="font-size:15px; font-family:Thoma ; font-weight: 500;">Photometric Stereo Reconstruction</span>
-				<center>
-			</td>
-			<td width=400px>
-				<center>
-					<span style="font-size:15px; font-family:Thoma ; font-weight: 500;">Our Approach <br></span>
-				<center>
-			</td>
+
+	
 
 
+		<!-- Abstract -->
+		<div class="container">
+			<div style="text-align: justify">
+				<h2>Abstract</h2>
+				<span class="abstract">This paper presents a simple and effective solution to the longstanding classical multi-view photometric stereo (MVPS) problem. It is well-known that photometric stereo (PS) is excellent at recovering high-frequency surface details, whereas multi-view stereo (MVS) can help remove the low-frequency distortion due to PS and retain the global geometry of the shape. This paper proposes an approach that can effectively utilize such complementary strengths of PS and MVS. Our key idea is to combine them suitably while considering the per-pixel uncertainty of their estimates. To this end, we estimate per-pixel surface normals and depth using an uncertainty-aware deep-PS network and deep-MVS network, respectively. Uncertainty modeling helps select reliable surface normal and depth estimates at each pixel which then act as a true representative of the dense surface geometry. At each pixel, our approach either selects or discards deep-PS and deep-MVS network prediction depending on the prediction uncertainty measure. For dense, detailed, and precise inference of the object's surface profile, we propose to learn the implicit neural shape representation via a multilayer perceptron (MLP). Our approach encourages the MLP to converge to a natural zero-level set surface using the confident prediction from deep-PS and deep-MVS networks, providing superior dense surface reconstruction. Extensive experiments on the DiLiGenT-MV benchmark dataset show that our method provides high-quality shape recovery with a much lower memory footprint while outperforming almost all of the existing approaches.</span>
+			</div>
+		</div>
 
-
-		</tr>
-	</table>
 	<br>
 
+<!-- Teaser Image -->
+	<div class="container">
+		<div class="row justify-content-lg-center">
+		  <div class="col col-lg-4"><center>
+		  	<a><img src="./images/mvs.png" height="160px"></img></href></a><br><span>Multi-View Stereo Reconstruction</span><br><br>
+		  </div>
+	 	  <div class="col col-lg-4"><center>
+	 	  	<a><img src="./images/ps.png" height="160px"></img></href></a><br><span>Photometric Stereo Reconstruction</span><br><br>
+		  </div>
+		  <div class="col col-lg-4"><center>
+		  	<a><img src="./images/fusion.png" height="160px"></img></href></a><br><span>Our Approach</span><br><br>
+		  </div>
+		</div>
+	</div>
 
+	<a class = 'anchor' name='reconstructions'></a>
+	<br>
 	<hr>
 
-	<!-- Abstract of the project-->
-	<h2 > Abstract </h2>
-	<p style="text-align: justify";>
-		<font style="font-family: Calibri  ; font-size: 18px; font-weight: 500">
-		This paper presents a simple and effective solution to the longstanding classical multi-view photometric stereo (MVPS) problem. It is well-known that photometric stereo (PS) is excellent at recovering high-frequency surface details, whereas multi-view stereo (MVS) can help remove the low-frequency distortion due to PS and retain the global geometry of the shape. This paper proposes an approach that can effectively utilize such complementary strengths of PS and MVS. Our key idea is to combine them suitably while considering the per-pixel uncertainty of their estimates. To this end, we estimate per-pixel surface normals and depth using an uncertainty-aware deep-PS network and deep-MVS network, respectively. Uncertainty modeling helps select reliable surface normal and depth estimates at each pixel which then act as a true representative of the dense surface geometry. At each pixel, our approach either selects or discards deep-PS and deep-MVS network prediction depending on the prediction uncertainty measure. For dense, detailed, and precise inference of the object's surface profile, we propose to learn the implicit neural shape representation via a multilayer perceptron (MLP). Our approach encourages the MLP to converge to a natural zero-level set surface using the confident prediction from deep-PS and deep-MVS networks, providing superior dense surface reconstruction. Extensive experiments on the DiLiGenT-MV benchmark dataset show that our method provides high-quality shape recovery with a much lower memory footprint while outperforming almost all of the existing approaches.
-		</font>
-	</p><br>
-	
-		<a><img src="./images/pipeline.png" width="1000px"></img></href></a><br>
-		<br>
 
+<!--
+		<center>
+			<h2>Reconstructions</h2> 
+			<img src="./images/gifs/bear.gif" width="800px"><h5> BEAR </h5><br>
+			<img src="./images/gifs/buddha.gif" width="800px"><h5> BUDDHA </h5><br>
+			<img src="./images/gifs/cow.gif" width="800px"><h5> COW </h5><br>
+			<img src="./images/gifs/pot.gif" width="800px"><h5> POT2 </h5><br>
+			<img src="./images/gifs/reading.gif" width="800px"><h5> READING </h5><br>
+		</center>
+
+<hr> -->
+
+			<h2>3D Reconstructions</h2> <br>
+
+
+	<div class="container">
+		<div class="row justify-content-lg-center">
+		  <div class="col col-xl-6"><center>
+		  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/bear.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Bear </h5>
+		  </div>
+	 	  <div class="col col-xl-6"><center>
+	 	  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/buddha.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Buddha </h5>
+		  </div>
+		  <div class="col col-xl-6"><center>
+		  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/cow.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Cow </h5>
+		  </div>
+	 	  <div class="col col-xl-6"><center>
+	 	  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/pot.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Pot2 </h5>
+			</div>	 	  
+			<div class="col col-xl-6"><center>
+	 	  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/reading.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Reading </h5>
+			</div>
+		</div>
+	</div>
+
+
+<!--
+		<center>
+			<h2>Reconstructions</h2> 
+			<video width="800" controls autoplay muted loop> 
+				<source src="./videos/bear.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> BEAR </h5><br>
+			<video width="800" controls autoplay muted loop> 
+				<source src="./videos/buddha.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> BUDDHA </h5><br>
+			<video width="800" controls autoplay muted loop> 
+					<source src="./videos/cow.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video><h5> COW </h5><br>
+			<video width="800" controls autoplay muted loop> 
+				<source src="./videos/pot.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> POT2 </h5><br>
+			<video width="800" controls autoplay muted loop> 
+				<source src="./videos/reading.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> READING </h5><br>
+		</center> -->
+
+
+	<a class = 'anchor' name='mesh_quality'></a>
+	<br>
 	<hr>
+	<h2>Mesh Quality</h2> <br>
+
+
+
+	<div class="container">
+		<div class="row justify-content-lg-center">
+		  <div class="col col-xl-6"><center>
+		  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/bear_mesh.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Bear </h5>
+		  </div>
+	 	  <div class="col col-xl-6"><center>
+	 	  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/buddha_mesh.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Buddha </h5>
+		  </div>
+		  <div class="col col-xl-6"><center>
+		  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/cow_mesh.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Cow </h5>
+		  </div>
+	 	  <div class="col col-xl-6"><center>
+	 	  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/pot_mesh.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Pot2 </h5>
+			</div>	 	  
+			<div class="col col-xl-6"><center>
+	 	  	<video width="500" controls autoplay muted loop> 
+				<source src="./videos/reading_mesh.mp4#t=1" type="video/mp4">
+				Your browser does not support the video tag.
+			</video><h5> Reading </h5>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--We demonstrate the quality of the recovered meshes for DiLiGenT-MV objects. Fig.1-Fig.4 show the colored Wireframe model comparison of the object surface recovered using our approach, B-MVPS [36] and GT. The visualizations
+show that the distribution of the geometric primitives of B-MVPS [36] is irregular and unevenly distributed. Similarly, Fig.5-Fig.9 show the quality of the meshes compared
+to NeRF [43], R-MVPS [49], and B-MVPS [36]. Overall,
+it can be observed that our method provides surfaces which
+are superior in quality, regular, hence more useful for geometry processing applications. -->
+
+
+<video width="1000" controls autoplay muted loop> 
+	<source src="./videos/results_video.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+
 
 
 	<!--Some Results-->	
@@ -413,6 +542,7 @@
 	
 	<br><br><br>
 	<hr>
+
 
 	<!--Acknowledgements-->
 	<table align=center width=600px>
