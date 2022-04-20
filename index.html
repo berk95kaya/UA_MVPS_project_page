@@ -183,8 +183,11 @@
               <a class="nav-link" href="#mesh_quality">Mesh Quality</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" href="#authors">Authors</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#citation">Citation</a>
+            </li>            
           </ul>
         </div>
       </nav>
@@ -404,7 +407,7 @@
 		  <div class="col col-xl-6"><center>
 			  	<div style="text-align: justify">
 				  	<span class="abstract">
-				  		We demonstrate the quality of the recovered meshes for DiLiGenT-MV objects. Fig.1-Fig.4 show the colored Wireframe model comparison of the object surface recovered using our approach, B-MVPS [36] and GT. The visualizations show that the distribution of the geometric primitives of B-MVPS [36] is irregular and unevenly distributed. Similarly, Fig.5-Fig.9 show the quality of the meshes comparedto NeRF [43], R-MVPS [49], and B-MVPS [36]. Overall, it can be observed that our method provides surfaces which are superior in quality, regular, hence more useful for geometry processing applications.
+				  		We investigated the quality of the recovered meshes for DiLiGenT-MV objects. The visual results show that the distribution of the geometric primitives of SOTA MVPS methods is irregular and uneven. We also transfered the CVPR’22 logo texture on the local region of the mesh recovered using MVPS methods. It can be observed that the texture pattern on our recovered mesh is closer to ground-truth (notice the shift of the text). If the local topology is same, it must place the text at similar location as can be seen in ours. Overall, our method provides surfaces which are superior in quality, regular, hence more useful for geometry processing applications.
 				  	</span>
 				</div>	
 			</div>	 	  
@@ -419,119 +422,53 @@
 	</div>
 
 
-
-<!--
-	<div class="container">
-		<div class="row justify-content-lg-center">
-		  <div class="col col-xl-6"><center>
-		  	<video width="500" controls autoplay muted loop> 
-				<source src="./videos/bear_mesh.mp4#t=1" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> Bear </h5>
-		  </div>
-	 	  <div class="col col-xl-6"><center>
-	 	  	<video width="500" controls autoplay muted loop> 
-				<source src="./videos/buddha_mesh.mp4#t=1" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> Buddha </h5>
-		  </div>
-		  <div class="col col-xl-6"><center>
-		  	<video width="500" controls autoplay muted loop> 
-				<source src="./videos/cow_mesh.mp4#t=1" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> Cow </h5>
-		  </div>
-	 	  <div class="col col-xl-6"><center>
-	 	  	<video width="500" controls autoplay muted loop> 
-				<source src="./videos/pot_mesh.mp4#t=1" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> Pot2 </h5>
-			</div>	 	  
-			<div class="col col-xl-6"><center>
-	 	  	<video width="500" controls autoplay muted loop> 
-				<source src="./videos/reading_mesh.mp4#t=1" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> Reading </h5>
-			</div>
+<br>
+<div class="container">
+		<div class="row justify-content-lg-center">	
+		  <div class="col col-xl-12"><center>
+				<div style="text-align: center"><span>Texture and Colored Wireframe Comparison</span><br></div>
+				<video width="700" controls autoplay muted loop> 
+						<source src="./videos/texture.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video><br>
+			</div>	
 		</div>
 	</div>
--->
 
 
 
 
-<!--We demonstrate the quality of the recovered meshes for DiLiGenT-MV objects. Fig.1-Fig.4 show the colored Wireframe model comparison of the object surface recovered using our approach, B-MVPS [36] and GT. The visualizations
-show that the distribution of the geometric primitives of B-MVPS [36] is irregular and unevenly distributed. Similarly, Fig.5-Fig.9 show the quality of the meshes compared
-to NeRF [43], R-MVPS [49], and B-MVPS [36]. Overall,
-it can be observed that our method provides surfaces which
-are superior in quality, regular, hence more useful for geometry processing applications. -->
-
-
-<video width="1000" controls autoplay muted loop> 
-	<source src="./videos/results_video.mp4" type="video/mp4">
-	Your browser does not support the video tag.
-</video>
-
-
-
-	<!--Some Results-->	
-	<h2>Results</h1>
-
-
-		<a><img src="./images/diligent_comparison.png" width="800px"></img></href></a><br>
-		<p> F-Score comparison on <a href="https://sites.google.com/site/photometricstereodata/mv">DiLiGenT-MV</a> dataset.</p><br>
-
-		<a><img src="./images/texture_comparison.png" width="600px"></img></href></a><br>
-		<p> Comparison of textured mesh quality.</p><br>
-
-
-		<a><img src="./images/wireframe.png" width="600px"></img></href></a><br>
-		<p> Colored Wireframe comparison.</p><br>
-
-	<br>
-	<hr> 
-
-	<!--Code or github link-->
-<!-- 	<center>
-		<h1>Code and Dataset</h1>
-	</center>
-	<table align=center width=1000px>
-		<tr>
-			<center>
-				<br><span style="font-size:28px">&nbsp;<a
-						href="https://github.com/suryanshkumar">[GitHub]</a></span><span style="font-size:28px"></span>
-					<span style="font-size:28px">&nbsp;<a
-						href="https://data.vision.ee.ethz.ch/bekaya/PS_Datasets/Dome_Dataset.zip">[Dataset]</a></span><span style="font-size:28px"></span>
-				<br>
-			</center>
-		</tr>
-	</table>
-	<br>
-	<hr> -->
-
-	<!--Results (Pictures or Youtube link) or Presentation link-->
-	<a name="results"></a>
-
-
-
-	<table align=center width=1000px>
-		<!--Video link-->
-		<tr height="400px">
-			<td valign="top" width=1100px>
-				<center>
-					<video width="1000" controls autoplay muted loop> 
-						<source src="./videos/results_video.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</center>
-			</td>
-		</tr>
-	</table>
+	
+	<a class = 'anchor' name='authors'></a>
 	<br>
 	<hr>
-	
  	<!--Authors-->
 	<h2>Authors</h2>
+
+
+
+	<div class="container">
+		<div class="row justify-content-lg-center">
+		  <div class="col col-xl-2"><center>
+		  	<div class="author_image"><img style="height:150px" src="./images/authors/berk.jpg"><span><br>Berk Kaya</span></div>
+		  </div>
+	 	  <div class="col col-xl-2"><center>
+	 	  	<div class="author_image"><img style="height:150px" src="./images/authors/suryansh.jpg"><span><br>Suryansh Kumar</span></div>
+		  </div>
+		  <div class="col col-xl-2"><center>
+		  	<div class="author_image"><img style="height:150px" src="./images/authors/cadu.jpg"><span><br>Carlos Oliveira</span></div>
+		  </div>
+	 	  <div class="col col-xl-2"><center>
+	 	  	<div class="author_image"><img style="height:150px" src="./images/authors/vitto.png"><span><br>Vittorio Ferrari</span></div>
+			</div>	 	  
+			<div class="col col-xl-2"><center>
+	 	  	<div class="author_image"><img style="height:150px" src="./images/authors/luc.png">
+				<span><br>Luc Van Gool</span></div>	
+			</div>
+		</div>
+	</div> 
+
+<!--
 	<table align=center width=1000px>
 		<tr>
 			<td>
@@ -552,24 +489,56 @@ are superior in quality, regular, hence more useful for geometry processing appl
 			</td>	
 		</tr>
 	</table>
-	<hr>
+	<hr> -->
+<a class = 'anchor' name='citation'></a>
+<br>
+<hr>
+<h2> Citation </h2>
 
-	<h2> Citation </h2>
-    <p style="width:600px; text-align: left";><code >
-	@article{kaya2022uncertainty,
+<div class="container">
+	<div class="row justify-content-lg-center">
+		<div class="card bg-light mb-3" style="width: 700px;">
+	 	  <div class="card-body">
+				<pre>
+@article{kaya2022uncertainty,
 	title={Uncertainty-Aware Deep Multi-View Photometric Stereo},
-	author={Kaya, Berk and Kumar, Suryansh and Oliveira,
-	Carlos and Ferrari, Vittorio and Van Gool, Luc},
-	journal={CVPR}, year={2022}}}
-	</code></pre>
-	
-	<br><br><br>
-	<hr>
+	author={Kaya, Berk and Kumar, Suryansh and Oliveira, Carlos and Ferrari, Vittorio and Van Gool, Luc},
+	journal={CVPR},
+	year={2022}}
+}	     
+				</pre>
+			</div>
+		</div>
+	</div>
+</div>
 
 
-	<!--Acknowledgements-->
+
+
+<!--Acknowledgements-->
+<a class = 'anchor' name='acknowledgements'></a>
+<br>
+<hr>
+<h2>Acknowledgements</h2>
+
+
+	<div class="container">
+		<div class="row justify-content-lg-center">
+		  <div class="col col-xl-3"><center>
+		  	<img style="height:50px" src="./images/eth_zurich_logo.png">
+		  </div>
+	 	  <div class="col col-xl-3"><center>
+	 	  	<img style="height:50px" src="./images/cvl.png">
+		  </div>
+		  <div class="col col-xl-3"><center>
+		  	<img style="height:50px" src="./images/google_logo.png">
+		  </div>
+	 	</div>
+	</div> 
+
+
+<!--
 	<table align=center width=600px>
-			<h2>Acknowledgements</h2>
 		<tr>
 			<td>
 				<center>
@@ -588,7 +557,8 @@ are superior in quality, regular, hence more useful for geometry processing appl
 			</td>
 		</tr>
 	</table>
-
+-->
+<br>
 	<p style="width:800px; text-align: justify";>
 		This work was funded by Focused Research Award from Google(CVL, ETH 2019-HE-318, 2019-HE-323, 2020-FS-351, 2020-HS-411). Suryansh Kumar's project is supported by "ETH Zurich Foundation and Google" for bringing together best academic and industrial research. </p>
 	<br><br>
