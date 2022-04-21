@@ -14,6 +14,7 @@
 		width: 1100px;
 		text-align: center;
 	}*/
+
 	h1 {
 		font-weight: 300;
 		margin-left: auto;
@@ -62,8 +63,6 @@
 		text-align: justify;
 	}
 
-
-
 .disclaimerbox {
 		background-color: #eee;
 		border: 1px solid #eeeeee;
@@ -77,9 +76,7 @@
 		font-size:10px;
 		color:#555555;
 	}
-
 	
-
 	video.header-vid {
 		height: 140px;
 		border: 1px solid black;
@@ -109,22 +106,9 @@
 		text-decoration: none;
 	}
 
-
 	a:hover {
 		color: #208799;
 	}
-
-	/* 
-
-	a:link,
-		a:visited {
-			color: #1367a7;
-			text-decoration: none;
-		}
-
-	a:hover {
-		color: #208799;
-	} */
 
 	td.dl-link {
 		height: 160px;
@@ -132,10 +116,9 @@
 		font-size: 22px;
 	}
 
-
-	hr {
+	hr.bold {
 		border: 0;
-		height: 5px;
+		height: 2px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
 
@@ -145,119 +128,106 @@
 
 </style>
 	
-
 <!-- HTML PART -->
 <html lang="en">
 
 <head>
 	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 	<title>Uncertainty-Aware Deep Multi-View Photometric Stereo</title>
 	<meta property="og:image" content="" />
 	<meta property="og:title" content="Uncertainty-Aware Deep Multi-View Photometric Stereo"/>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <!-- <link href="sticky-footer-navbar.css" rel="stylesheet"> -->
-
-
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom styles for this template -->
+  <!-- <link href="sticky-footer-navbar.css" rel="stylesheet"> -->
 </head>
-
-
 
 <!--Main page starts here-->
 <body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #000000;">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+   			<span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-danger" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#abstract">Abstract</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#reconstructions">Reconstructions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#mesh_quality">Mesh Quality</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#authors">Authors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#citation">Citation</a>
+          </li>            
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #000000;">
-        <a class="navbar-brand" href="#">   </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#abstract">Abstract</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#reconstructions">Reconstructions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#mesh_quality">Mesh Quality</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#authors">Authors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#citation">Citation</a>
-            </li>            
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-
-    <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid">
 	  <div class="container">
   		<div class="pager-header">
-			<br>
+				<br>
 	    	<h1 class="title">Uncertainty-Aware Deep Multi-View Photometric Stereo</h1>
 	     	<hr class="my-4">
-
-			<!-- Authors -->
+				<!-- Authors -->
 		  	<div class="row justify-content-md-center">
-				<div class="col-md-auto text-center">
-					<span class="authors"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup class="affiliation">1</sup></span>					
+					<div class="col-md-auto text-center">
+						<span class="authors"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup class="affiliation">1</sup></span>					
+					</div>
+					<div class="col-md-auto text-center">
+						<span class="authors"><a href="https://suryanshkumar.github.io/">Suryansh Kumar</a><sup class="affiliation">1</sup></span>					
+					</div>
+					<div class="col-md-auto text-center">
+						<span class="authors"><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.MjM1NjA3.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html">Carlos Oliveira</a><sup class="affiliation">1</sup></span>					
+					</div>
+					<div class="col-md-auto text-center">
+						<span class="authors"><a href="https://sites.google.com/view/vittoferrari">Vittorio Ferrari</a><sup class="affiliation">2</sup></span>					
+					</div>
+					<div class="col-md-auto text-center">
+						<span class="authors"><a href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en">Luc Van Gool</a><sup class="affiliation">1,3</sup></span>					
+					</div>
 				</div>
-				<div class="col-md-auto text-center">
-					<span class="authors"><a href="https://suryanshkumar.github.io/">Suryansh Kumar</a><sup class="affiliation">1</sup></span>					
+  			<!-- Affiliations -->
+				<div class="row justify-content-md-center">
+					<div class="col-md-auto text-center">
+						<span class="authors"> ETH Zurich<sup class="affiliation">1</sup></span>					
+					</div>
+					<div class="col-md-auto text-center">
+						<span class="authors">Google Research<sup class="affiliation">2</sup></span>					
+					</div>
+					<div class="col-md-auto text-center">
+						<span class="authors">KU Lueven<sup class="affiliation">3</sup></span>								
+					</div>
 				</div>
-				<div class="col-md-auto text-center">
-					<span class="authors"><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.MjM1NjA3.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html">Carlos Oliveira</a><sup class="affiliation">1</sup></span>					
+				<br>
+				<!-- Conference -->
+				<center>	
+					<span class="conference">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2022</span><br>
+					<span class="conference">New Orleans - Louisiana </span>
+					</center>
+				  </div>
+				  </div>
 				</div>
-				<div class="col-md-auto text-center">
-					<span class="authors"><a href="https://sites.google.com/view/vittoferrari">Vittorio Ferrari</a><sup class="affiliation">2</sup></span>					
-				</div>
-				<div class="col-md-auto text-center">
-					<span class="authors"><a href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en">Luc Van Gool</a><sup class="affiliation">1,3</sup></span>					
-				</div>
-			</div>
-
-
-	    <!-- Affiliations -->
-	  	<div class="row justify-content-md-center">
-			<div class="col-md-auto text-center">
-				<span class="authors"> ETH Zurich<sup class="affiliation">1</sup></span>					
-			</div>
-			<div class="col-md-auto text-center">
-				<span class="authors">Google Research<sup class="affiliation">2</sup></span>					
-			</div>
-			<div class="col-md-auto text-center">
-				<span class="authors">KU Lueven<sup class="affiliation">3</sup></span>								
 			</div>
 		</div>
-
-		<br>
-		<!-- Conference -->
-		<center>	
-			<span class="conference">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2022</span><br>
-			<span class="conference">New Orleans - Louisiana </span>
-		</center>
-	  </div>
-	  </div>
 	</div>
-	<!-- End of header -->
-
 	<br>
 
 	<!-- Links -->
@@ -291,29 +261,17 @@
 		</div>
 	</div>
 
-	<a class = 'anchor' name='abstract'></a>
-	<br>
-	<hr>
-	<br>
+	<a class = 'anchor' name='abstract'></a><br><hr class="bold"><br>
 	
-
-
-	
-
-
-		<!-- Abstract -->
-		<div class="container">
-			<div style="text-align: justify">
-				<h2>Abstract</h2>
-				<span class="abstract">This paper presents a simple and effective solution to the longstanding classical multi-view photometric stereo (MVPS) problem. It is well-known that photometric stereo (PS) is excellent at recovering high-frequency surface details, whereas multi-view stereo (MVS) can help remove the low-frequency distortion due to PS and retain the global geometry of the shape. This paper proposes an approach that can effectively utilize such complementary strengths of PS and MVS. Our key idea is to combine them suitably while considering the per-pixel uncertainty of their estimates. To this end, we estimate per-pixel surface normals and depth using an uncertainty-aware deep-PS network and deep-MVS network, respectively. Uncertainty modeling helps select reliable surface normal and depth estimates at each pixel which then act as a true representative of the dense surface geometry. At each pixel, our approach either selects or discards deep-PS and deep-MVS network prediction depending on the prediction uncertainty measure. For dense, detailed, and precise inference of the object's surface profile, we propose to learn the implicit neural shape representation via a multilayer perceptron (MLP). Our approach encourages the MLP to converge to a natural zero-level set surface using the confident prediction from deep-PS and deep-MVS networks, providing superior dense surface reconstruction. Extensive experiments on the DiLiGenT-MV benchmark dataset show that our method provides high-quality shape recovery with a much lower memory footprint while outperforming almost all of the existing approaches.</span>
-			</div>
+	<!-- Abstract -->
+	<div class="container">
+		<div style="text-align: justify">
+			<h2>Abstract</h2>
+			<span class="abstract">This paper presents a simple and effective solution to the longstanding classical multi-view photometric stereo (MVPS) problem. It is well-known that photometric stereo (PS) is excellent at recovering high-frequency surface details, whereas multi-view stereo (MVS) can help remove the low-frequency distortion due to PS and retain the global geometry of the shape. This paper proposes an approach that can effectively utilize such complementary strengths of PS and MVS. Our key idea is to combine them suitably while considering the per-pixel uncertainty of their estimates. To this end, we estimate per-pixel surface normals and depth using an uncertainty-aware deep-PS network and deep-MVS network, respectively. Uncertainty modeling helps select reliable surface normal and depth estimates at each pixel which then act as a true representative of the dense surface geometry. At each pixel, our approach either selects or discards deep-PS and deep-MVS network prediction depending on the prediction uncertainty measure. For dense, detailed, and precise inference of the object's surface profile, we propose to learn the implicit neural shape representation via a multilayer perceptron (MLP). Our approach encourages the MLP to converge to a natural zero-level set surface using the confident prediction from deep-PS and deep-MVS networks, providing superior dense surface reconstruction. Extensive experiments on the DiLiGenT-MV benchmark dataset show that our method provides high-quality shape recovery with a much lower memory footprint while outperforming almost all of the existing approaches.</span>
 		</div>
-
-	<br>
-	<br>
+	</div><br><br>
 	
-
-<!-- Teaser Image -->
+	<!-- Teaser Image -->
 	<div class="container">
 		<div class="row justify-content-lg-center">
 		  <div class="col col-lg-4"><center>
@@ -327,27 +285,23 @@
 		  </div>
 		</div>
 	</div>
-
-	<hr>
-
 	<a class = 'anchor' name='reconstructions'></a>
 	<br>
+	<hr class="bold">
 
-<!--
-		<center>
-			<h2>Reconstructions</h2> 
-			<img src="./images/gifs/bear.gif" width="800px"><h5> BEAR </h5><br>
-			<img src="./images/gifs/buddha.gif" width="800px"><h5> BUDDHA </h5><br>
-			<img src="./images/gifs/cow.gif" width="800px"><h5> COW </h5><br>
-			<img src="./images/gifs/pot.gif" width="800px"><h5> POT2 </h5><br>
-			<img src="./images/gifs/reading.gif" width="800px"><h5> READING </h5><br>
-		</center>
+	<!--
+			<center>
+				<h2>Reconstructions</h2> 
+				<img src="./images/gifs/bear.gif" width="800px"><h5> BEAR </h5><br>
+				<img src="./images/gifs/buddha.gif" width="800px"><h5> BUDDHA </h5><br>
+				<img src="./images/gifs/cow.gif" width="800px"><h5> COW </h5><br>
+				<img src="./images/gifs/pot.gif" width="800px"><h5> POT2 </h5><br>
+				<img src="./images/gifs/reading.gif" width="800px"><h5> READING </h5><br>
+			</center>
 
-<hr> -->
+	<hr> -->
 
-			<h2>Reconstruction Results Comparison</h2> <br>
-
-
+	<h2>Reconstruction Results Comparison</h2><br>
 	<div class="container">
 		<div class="row justify-content-lg-center">
 	 	  <div class="col col-xl-6"><center>
@@ -366,91 +320,57 @@
 	 	  	<video width="500" controls autoplay muted loop> 
 				<source src="./videos/pot.mp4#t=1" type="video/mp4">
 				Your browser does not support the video tag.
-			</video><br><span> Pot </span><br><br>
+			</video><br><span> Pot </span><br>
 			</div>	 	  
 			<div class="col col-xl-6"><center>
 	 	  	<video width="500" controls autoplay muted loop> 
 				<source src="./videos/reading.mp4#t=1" type="video/mp4">
 				Your browser does not support the video tag.
-			</video><br><span> Reading </span><br><br>
+			</video><br><span> Reading </span><br>
 			</div>
 		</div>
 	</div> 
-
-
-<!--
-		<center>
-			<h2>Reconstructions</h2> 
-			<video width="800" controls autoplay muted loop> 
-				<source src="./videos/bear.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> BEAR </h5><br>
-			<video width="800" controls autoplay muted loop> 
-				<source src="./videos/buddha.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> BUDDHA </h5><br>
-			<video width="800" controls autoplay muted loop> 
-					<source src="./videos/cow.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video><h5> COW </h5><br>
-			<video width="800" controls autoplay muted loop> 
-				<source src="./videos/pot.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> POT2 </h5><br>
-			<video width="800" controls autoplay muted loop> 
-				<source src="./videos/reading.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video><h5> READING </h5><br>
-		</center> -->
-
-	<hr>
-
 	<a class = 'anchor' name='mesh_quality'></a>
 	<br>
+	<hr class="bold">
 	<h2>Mesh Quality Comparison</h2> <br>
 
-
-
-<div class="container">
+	<div class="container">
 		<div class="row justify-content-lg-center">
-		  <div class="col col-xl-6"><center>
-			  	<div style="text-align: justify">
-				  	<span class="abstract">
-				  		We investigated the quality of the recovered meshes for DiLiGenT-MV objects. The visual results show that the distribution of the geometric primitives of SOTA MVPS methods is irregular and uneven. We also transfered the CVPR’22 logo texture on the local region of the mesh recovered using MVPS methods. It can be observed that the texture pattern on our recovered mesh is closer to ground-truth (notice the shift of the text). If the local topology is same, it must place the text at similar location as can be seen in ours. Overall, our method provides surfaces which are superior in quality, regular, hence more useful for geometry processing applications.
-				  	</span>
+		  <div class="col col-xl-12"><center>
+		  	<div style="text-align: justify">
+			  	<span class="abstract">
+			  		We investigated the quality of the recovered meshes for DiLiGenT-MV objects. The visual results show that the distribution of the geometric primitives of SOTA MVPS methods is irregular and uneven. We also transfered the CVPR’22 logo texture on the local region of the mesh recovered using MVPS methods. It can be observed that the texture pattern on our recovered mesh is closer to ground-truth (notice the shift of the text). If the local topology is same, it must place the text at similar location as can be seen in ours. Overall, our method provides surfaces which are superior in quality, regular, hence more useful for geometry processing applications.
+			  	</span>
 				</div>	
 			</div>	 	  
- 	  
+		</div>	 	  
+	</div><br>  
+
+
+	<div class="container">
+		<div class="row justify-content-lg-center">
 			<div class="col col-xl-6"><center>
-	 	  	<video width="500" controls autoplay muted loop> 
-				<source src="./videos/pot_mesh.mp4#t=1" type="video/mp4">
+	 	  	<video height="270" controls autoplay muted loop> 
+				<source src="./videos/mesh_quality.mp4#t=1" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
 			</div>
+			<div class="col col-xl-6"><center>
+				<video height="270" controls autoplay muted loop> 
+					<source src="./videos/texture.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video><br>
+			</div>
 		</div>
-	</div>
-
-
-<br>
-<div class="container">
-		<div class="row justify-content-lg-center">	
-		  <div class="col col-xl-12"><center>
-				<div style="text-align: center"><span>Texture and Colored Wireframe Comparison</span><br></div>
-				<video width="700" controls autoplay muted loop> 
-						<source src="./videos/texture.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video><br>
-			</div>	
-		</div>
-	</div>
+	</div><br>
 
 
 
 
-	
 	<a class = 'anchor' name='authors'></a>
 	<br>
-	<hr>
+	<hr class="bold">
  	<!--Authors-->
 	<h2>Authors</h2><br>
 	<div class="container">
@@ -474,57 +394,32 @@
 		</div>
 	</div> 
 
-<!--
-	<table align=center width=1000px>
-		<tr>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/berk.jpg"><span><br>Berk Kaya</span></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/suryansh.jpg"><span><br>Suryansh Kumar</span></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/cadu.jpg"><span><br>Carlos Oliveira</span></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/vitto.png"><span><br>Vittorio Ferrari</span></div>
-			</td>
-			<td>
-				<div class="author_image"><img style="height:150px" src="./images/authors/luc.png">
-				<span><br>Luc Van Gool</span></div>	
-			</td>	
-		</tr>
-	</table>
-	<hr> -->
-<a class = 'anchor' name='citation'></a>
-<br>
-<hr>
-<h2> Citation </h2><br>
-<div class="container">
-	<div class="row justify-content-lg-center">
-		<div class="card bg-light mb-3" style="width: 700px;">
-	 	  <div class="card-body">
-				<pre>
+	<a class = 'anchor' name='citation'></a>
+	<br>
+	<hr class="bold">
+	<h2> Citation </h2><br>
+	<div class="container">
+		<div class="row justify-content-lg-center">
+			<div class="card bg-light mb-3" style="width: 700px;">
+		 	  <div class="card-body">
+					<pre>
 @article{kaya2022uncertainty,
 	title={Uncertainty-Aware Deep Multi-View Photometric Stereo},
 	author={Kaya, Berk and Kumar, Suryansh and Oliveira, Carlos and Ferrari, Vittorio and Van Gool, Luc},
 	booktitle={IEEE/CVF CVPR},
 	year={2022}
 }	     
-				</pre>
+					</pre>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-
-
-
-<!--Acknowledgements-->
-<a class = 'anchor' name='acknowledgements'></a>
-<br>
-<hr>
-<h2>Acknowledgements</h2><br>
+	<!--Acknowledgements-->
+	<a class = 'anchor' name='acknowledgements'></a>
+	<br>
+	<hr class="bold">
+	<h2>Acknowledgements</h2><br>
 	<div class="container">
 		<div class="row justify-content-lg-center">
 		  <div class="col col-xl-3"><center>
@@ -540,32 +435,11 @@
 	</div> 
 
 
-<!--
-	<table align=center width=600px>
-		<tr>
-			<td>
-				<center>
-					<img style="height:50px" src="./images/eth_zurich_logo.png">
-				</center>
-			</td>
-			<td>		
-				<center>
-					<img style="height:50px" src="./images/cvl.png">
-				</center>
-			</td>
-			<td>		
-				<center>
-					<img style="height:50px" src="./images/google_logo.png">
-				</center>
-			</td>
-		</tr>
-	</table>
--->
-<br>
-	<p style="width:800px; text-align: justify";>
-		This work was funded by Focused Research Award from Google(CVL, ETH 2019-HE-318, 2019-HE-323, 2020-FS-351, 2020-HS-411). Suryansh Kumar's project is supported by "ETH Zurich Foundation and Google" for bringing together best academic and industrial research. </p>
-	<br><br>
 
+	<br>
+	<p style="width:800px; text-align: justify";>
+	This work was funded by Focused Research Award from Google(CVL, ETH 2019-HE-318, 2019-HE-323, 2020-FS-351, 2020-HS-411). Suryansh Kumar's project is supported by "ETH Zurich Foundation and Google" for bringing together best academic and industrial research. </p>
+	<br><br>
 </body>
 
 </html>
